@@ -1,0 +1,12 @@
+---
+title: "Leaflet Map Example"
+output: html_document
+---
+
+## Interactive Map with Leaflet
+
+This is an example of an interactive map created with the Leaflet package in R.
+
+```{r setup, include=FALSE}
+# Load required libraries
+library(leaflet)
