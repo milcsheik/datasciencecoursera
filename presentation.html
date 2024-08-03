@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Plotly Presentation</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ioslides@1.6.3/css/ioslides.css">
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist@2.10.0/plotly.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #map {
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Plotly Presentation</h1>
+
+  <section>
+    <h2>Introduction</h2>
+    <p>This is a presentation featuring an interactive Plotly plot.</p>
+  </section>
+
+  <section>
+    <h2>Plotly Plot</h2>
+    <div id="plotly-plot"></div>
+    <script>
+      var trace1 = {
+        x: [5.1, 4.9, 4.7, 4.6, 5.0, 5.4, 4.6, 5.0, 4.4, 4.9, 5.4],
+        y: [3.5, 3.0, 3.2, 3.1, 3.6, 3.9, 3.4, 3.4, 2.9, 3.1, 3.7],
+        mode: 'markers',
+        type: 'scatter',
+        marker: {color: 'red'},
+        name: 'Setosa'
+      };
+
+      var trace2 = {
+        x: [6.4, 5.6, 5.8, 6.3, 6.1, 6.4, 6.0, 6.9, 5.8, 6.8, 6.7],
+        y: [3.2, 2.8, 2.8, 2.9, 3.0, 3.2, 3.0, 3.1, 2.7, 3.2, 3.1],
+        mode: 'markers',
+        type: 'scatter',
+        marker: {color: 'blue'},
+        name: 'Versicolor'
+      };
+
+      var data = [trace1, trace2];
+
+      var layout = {
+        title: 'Interactive Plotly Plot',
+        xaxis: {title: 'Sepal Length'},
+        yaxis: {title: 'Sepal Width'}
+      };
+
+      Plotly.newPlot('plotly-plot', data, layout);
+    </script>
+  </section>
+
+</body>
+</html>
