@@ -1,0 +1,14 @@
+---
+title: "Plotly Presentation"
+output: 
+  ioslides_presentation:
+    width: 960
+    height: 720
+---
+
+## Introduction
+
+This is a presentation featuring an interactive Plotly plot.
+
+```{r setup, include=FALSE}
+library(plotly)
